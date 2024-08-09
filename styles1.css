@@ -1,61 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport Booking</title>
-    <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
-    <header>
-        <h1>Transport Booking</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#book">Book Transport</a></li>
-                <li><a href="#options">Options</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    <section id="home">
-        <h2>Welcome to Transport Booking</h2>
-        <p>Your one-stop solution for all your transport needs.</p>
-        <img src="transport.png" alt="Transport Service" class="responsive-image">
-    </section>
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
 
-    <section id="book">
-        <h2>Book Your Transport</h2>
-        <form id="booking-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-            
-            <label for="type">Transport Type:</label>
-            <select id="type" name="type">
-                <option value="bus">Bus</option>
-                <option value="train">Train</option>
-                <option value="flight">Flight</option>
-            </select>
-            
-            <button type="submit">Book Now</button>
-        </form>
-    </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-    <section id="options">
-        <h2>Available Options</h2>
-        <img src="Aunty3.jpg" alt="Bus" class="responsive-image">
-        <img src="Aunty2.jpg" alt="Train" class="responsive-image">
-        <img src="Aunty3.jpg" alt="Flight" class="responsive-image">
-        <div id="options-list"></div>
-    </section>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <footer>
-        <p>&copy; 2024 Transport Booking. All rights reserved.</p>
-    </footer>
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 
-    <script src="script1.js"></script>
-</body>
-</html>
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
